@@ -37,6 +37,7 @@
                 <exclude>**/netty-transports.yml</exclude>
                 <!--  change this to config provider format an add it again-->
                 <exclude>**/workflow-extensions.yml</exclude>
+                <exclude>wso2/lib/features/**</exclude>
             </excludes>
         </fileSet>
 
@@ -96,6 +97,11 @@
             <excludes>
                 <exclude>empty.txt</exclude>
             </excludes>
+        </fileSet>
+        <fileSet>
+            <directory>carbon-home/lib</directory>
+            <outputDirectory>lib</outputDirectory>
+            <fileMode>644</fileMode>
         </fileSet>
     </fileSets>
 

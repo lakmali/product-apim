@@ -157,7 +157,7 @@ done
 JAVA_ENDORSED_DIRS="$BALLERINA_HOME/bin/bootstrap/endorsed":"$JAVA_HOME/jre/lib/endorsed":"$JAVA_HOME/lib/endorsed"
 
 BALLERINA_CLASSPATH=""
-if [ -e "$CARBON_HOME/bre/lib/bootstrap/tools.jar" ]; then
+if [ -e "$BALLERINA_HOME/bre/lib/bootstrap/tools.jar" ]; then
     BALLERINA_CLASSPATH="$JAVA_HOME/lib/tools.jar"
 fi
 
@@ -201,7 +201,7 @@ $JAVACMD \
 	-Dballerina.home=$BALLERINA_HOME \
 	-Dballerina.version=${project.version} \
 	-Djava.util.logging.config.file="$BALLERINA_HOME/bre/conf/logging.properties" \
-	-Djava.util.logging.manager="org.ballerinalang.launcher.BLogManager" \
+	-Djava.util.logging.manager="org.ballerinalang.logging.BLogManager" \
 	-Dtransports.netty.conf="$BALLERINA_HOME/bre/conf/netty-transports.yml" \
 	-Djava.io.tmpdir="$BALLERINA_HOME/tmp" \
 	-Denable.nonblocking=false \
